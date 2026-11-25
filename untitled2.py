@@ -28,22 +28,10 @@ import sqlite3
 
 print("✅ Barcha kutubxonalar tayyor!")
 
-from getpass import getpass
+import os
 
-TOKEN = getpass("Bot tokenini kiriting: ")
-
-print("✅ Token qabul qilindi!")
-
+TOKEN = os.getenv("BOT_TOKEN")
 app = Application.builder().token(TOKEN).build()
-
-await app.initialize()
-
-bot_info = await app.bot.get_me()
-
-print("✅ Bot Telegramga ulandi!")
-print("Bot nomi:", bot_info.first_name)
-print("Bot username: @" + bot_info.username)
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         ["🚕 Taxi buyurtma berish"],
