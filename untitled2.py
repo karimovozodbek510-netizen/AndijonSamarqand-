@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/11uCRPuy-KqOHJblxZTgwuk6jxWsw1Ney
 """
 
-!pip install python-telegram-bot==22.8
-
 from telegram import (
     Update,
     ReplyKeyboardMarkup,
