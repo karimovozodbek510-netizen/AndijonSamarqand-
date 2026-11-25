@@ -54,10 +54,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 app.add_handler(CommandHandler("start", start))
 
-await app.start()
-await app.updater.start_polling(drop_pending_updates=True)
-
-print("🚕 BOT ISHLAYAPTI!")
 
 async def order_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
@@ -3657,3 +3653,5 @@ app.add_handler(
 )
 
 print("✅ Bo‘sh joylarni tekshirish tizimi ishga tushdi!")
+if __name__ == "__main__":
+    app.run_polling(drop_pending_updates=True)
